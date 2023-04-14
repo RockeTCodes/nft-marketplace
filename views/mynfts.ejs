@@ -1,0 +1,29 @@
+
+<%- include('partials/header') %>
+  <h3>NFTs You Own</h3>
+  <%if(nfts.length == 0){%>
+    <p>Sorry! You do not own any nfts yet.</p>
+  <%}%>
+  <div class="container">
+    <div class="row">
+      <%nfts.forEach(function(nft){%>
+    <form class="" action="/buynft" method="post">
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Name: <%=nft.name%></h5>
+            <img class="card-text" src="<%=nft.url%>" alt="HvcRVea.md.png" width="150" height="100" >
+            <p class="card-text">Price:<%=nft.price%></p>
+         <input type="hidden" name="nftname" value="<%=nft.name%>">
+         <input type="hidden" name="nftprice" value="<%=nft.price%>">
+         <input type="hidden" name="nfturl" value="<%=nft.url%>">
+
+      </form>
+          </div>
+        </div>
+      </div>
+      <%});%>
+    </div>
+  </div>
+<a role="button" class="btn btn-danger" href="/logout">Logout</a>
+<%- include('partials/footer') %>

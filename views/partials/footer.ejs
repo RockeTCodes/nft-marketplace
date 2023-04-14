@@ -1,0 +1,65 @@
+</div>
+</div>
+<script charset="utf-8">
+
+
+// document.getElementById('#alert').addEventListener('click', function() {
+//   document.getElementById('#alert').style.display = 'block';
+// })
+
+
+
+let addToCart = document.querySelectorAll('.add-to-cart');
+addToCart.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    document.getElementById('alert').style.display = 'block';
+  })
+})
+
+
+
+
+  // Get all elements with class="closebtn"
+  var close = document.getElementsByClassName("closebtn");
+  var i;
+
+  // Loop through all close buttons
+  for (i = 0; i < close.length; i++) {
+    // When someone clicks on a close button
+    close[i].onclick = function(){
+
+      // Get the parent of <span class="closebtn"> (<div class="alert">)
+      var div = this.parentElement;
+
+      // Set the opacity of div to 0 (transparent)
+      div.style.opacity = "0";
+
+      // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
+      setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+  // let addToCart = document.querySelectorAll('.add-to-cart');
+  // addToCart.forEach((btn) => {
+  //   btn.addEventListener('click', () => {
+  //     document.getElementById('#alert').style.display = 'block';
+  //   })
+  // })
+
+
+</script>
+</body>
+
+<footer>Made with ❤️ By <a href = "https://www.github.com/RockeTCodes">RockeTCodes</a></footer>
+
+</html>

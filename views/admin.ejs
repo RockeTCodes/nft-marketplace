@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+  <h1>Add new NFT</h1>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3UIcYLmKMrU5cVdggqqY58tKJXUCqm6QF2XeUNab39udpxiBmPSqKWxUVS8_lqN8dQuI&usqp=CAU" height="130" id="icon" alt="User Icon" />
+      </div>
+
+      <!-- Login Form -->
+      <form action="/addnewnft" method="POST">
+        <input type="text" id="name" class="fadeIn second" name="name" placeholder="Name">
+        <input type="text" id="url" class="fadeIn second" name="url" placeholder="URL">
+        <input type="text" id="price" class="fadeIn third" name="price" placeholder="Price">
+
+        <input type="submit" class="fadeIn fourth" value="Add Nft">
+      </form>
+
+
+
+    </div>
+  </div>
+<%- include('partials/footer') %>

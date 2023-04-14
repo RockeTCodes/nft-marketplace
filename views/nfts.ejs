@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>NFT Saga</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<nav class="navbar navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3UIcYLmKMrU5cVdggqqY58tKJXUCqm6QF2XeUNab39udpxiBmPSqKWxUVS8_lqN8dQuI&usqp=CAU"
+        height="20"
+        alt="NFT Saga Logo"
+        loading="lazy"
+      />
+    </a>
+
+    <div>
+      <a href="/cart" class="spl"><i class="fa fa-shopping-cart" aria-hidden="true" href="/cart"></i></a>
+      <span><%=cartitem.length%></span>
+
+    </div>
+
+
+  </div>
+</nav>
+
+<div class="alert" id='alert'>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  NFT Added To Cart
+</div>
+
+
+<body>
+  <div class="jumbotron centered">
+
+    <div class="container">
+
+      <h3>YOU CAN BUY NFTs FROM HERE.</h3>
+      <%if(nfts.length == 0){%>
+        <p>Sorry! No NFTs are available for buying currently.</p>
+      <%}%>
+      <div class="container">
+        <div class="row">
+          <%nfts.forEach(function(nft){%>
+        <form class="" action="/addtocart" method="post">
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Name: <%=nft.name%></h5>
+                <img class="card-text" src="<%=nft.url%>" alt="HvcRVea.md.png" width="150" height="100" >
+                <p class="card-text">Price:<%=nft.price%></p>
+             <input type="hidden" name="nftname" value="<%=nft.name%>">
+             <input type="hidden" name="nftprice" value="<%=nft.price%>">
+             <input type="hidden" name="nfturl" value="<%=nft.url%>">
+
+
+        <button data-nft="<%= JSON.stringify(nft) %>" class="add-to-cart" type="submit" value="<%=nft._id%>" name="nftid" >Add to Cart</button>
+          </form>
+
+
+
+              </div>
+            </div>
+          </div>
+          <%});%>
+        </div>
+      </div>
+
+<%- include('partials/footer') %>
