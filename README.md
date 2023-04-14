@@ -6,9 +6,9 @@ As soon as the user clicks on "Buy" button to buy the nfts the nfts are removed 
 buy another user.
 
 Endpoints:
-HomePage: https://tame-red-eagle-gear.cyclic.app/
-See all listed NFT : https://tame-red-eagle-gear.cyclic.app/nfts
-Login: https://tame-red-eagle-gear.cyclic.app/login
-Register:https://tame-red-eagle-gear.cyclic.app/register
-User Dashboard: https://tame-red-eagle-gear.cyclic.app/mynfts
-Cart:https://tame-red-eagle-gear.cyclic.app/cart
+# HomePage: https://tame-red-eagle-gear.cyclic.app/
+# See all listed NFT : https://tame-red-eagle-gear.cyclic.app/nfts
+# Login: https://tame-red-eagle-gear.cyclic.app/login
+# Register:https://tame-red-eagle-gear.cyclic.app/register
+# User Dashboard: https://tame-red-eagle-gear.cyclic.app/mynfts
+# Cart:https://tame-red-eagle-gear.cyclic.app/cart
