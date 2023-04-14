@@ -11,4 +11,6 @@ Endpoints:
 # Login: https://tame-red-eagle-gear.cyclic.app/login
 # Register:https://tame-red-eagle-gear.cyclic.app/register
 # User Dashboard: https://tame-red-eagle-gear.cyclic.app/mynfts
+(requires login ) 
 # Cart:https://tame-red-eagle-gear.cyclic.app/cart
+requires(login)
